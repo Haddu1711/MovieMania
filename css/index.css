@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    background-color: rgba(28, 41, 57, 0.932);
+    color: whitesmoke;  
+}
+
+/* Sliders */
+
+.carousel .carousel-item img{
+    width: 100vw;
+    height: 75vh;
+}
+.contentHeading, .showContent{
+    margin:10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .moves button,  */
+.backBtn button{
+    background-color: rgba(28, 41, 57, 0.932);
+    color: whitesmoke;
+    /* border: none; */
+    margin: auto 5px;
+    /* border-radius: 50%; */
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    /* width: 40px;
+    height: 40px; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: inset 5px 5px 20px rgb(28, 41, 57),
+                      0px 0px 5px rgba(0, 0, 0, 0.753); */
+}
+/* .moves i:hover */
+.backBtn button:hover{
+    background-color: rgba(49, 88, 101, 0.87);
+}
+
+.uptitle{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(28, 41, 57, 0.932);
+}
+
+/* sliders */
+.slideContent, .allContent{
+    margin: 10px auto;
+}
+.showContent .sliding{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    justify-content: left;
+    align-items: center;
+}
+
+.sliding .alldet{
+    margin: 0px 5px;
+    width: 225px;
+}
+.sliding .alldet .card{
+    border: none !important;
+    background-color: rgba(28, 41, 57, 0.932);
+    width: 225px;
+    border-radius: 10px;
+}
+.showContent .alldet .card img{
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
+}
+.card-img{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.titled .imgtitle{
+    width: 100%;
+    padding: 5px 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.showContent .alldet .card:hover img,
+.fullScroll .allCont .card:hover{
+    transform: scale(1.015,1.015);
+    opacity: 0.7;
+    transition: opacity 500ms;
+    border-radius: 10px;
+}
+
+.more{
+    margin:10px 15px;
+    text-align: end;
+}
+.more a{
+    text-decoration: none;
+}
+.showContent .sliding::-webkit-scrollbar{
+    /* display: none; */
+    width: 10px;
+    border-radius: 10px;
+    background-color: rgba(28, 41, 57, 0.932);
+    box-shadow: inset 5px 5px 20px rgba(28, 41, 57, 0.699),
+                0px 0px 5px rgba(0, 0, 0, 0.884);
+}
+.showContent .sliding::-webkit-scrollbar-thumb{
+    width: 40px;
+    border-radius: 10px;
+    /* box-shadow: inset 5px 5px 20px rgb(28, 41, 57); */
+                /* 0px 0px 5px rgba(0, 0, 0, 0.753); */
+    background-color: rgba(49, 88, 101, 0.87);
+}
+
+
+
+/* See More Page */
+
+.allContent .allShow{
+    padding: 0px 15px;
+    width: 100%; 
+    margin: 0px auto;
+}
+.allShow .fullScroll{
+    display: grid;
+    grid-template-columns: repeat(7, 13%);
+    /* grid-template-rows: repeat(auto,300px); */
+    grid-gap: 20px;
+}
+
+.fullScroll .allCont{
+    width: 100%;
+}
+.fullScroll .allCont .card,.fullScroll .allCont .card img{
+    border: none !important;
+    border-radius: 10px;
+    width: 100%;
+    height: 265px;
+}
+
+/* ENd See More Page */
+@media screen and (max-width:1030px){
+    /* See More */
+    .allShow .fullScroll{
+        display: grid;
+        grid-template-columns: repeat(6, 15%);
+        grid-gap: 18px;
+    }
+    .fullScroll .allCont .card,.fullScroll .allCont .card img{
+        height: 240px;
+    }
+    /* End See More */
+}
+@media screen and (max-width:770px){
+    .carousel .carousel-item img{
+        width: 100vw;
+        height: 300px;
+    }
+    .contentHeading, .showContent{
+        margin: 5px auto;
+    }
+    .sliding .alldet{
+        margin: 0px 5px;
+        width: 150px;
+    }
+    .showContent .alldet .card img, 
+    .fullScroll .allCont .card,
+    .fullScroll .allCont .card img{
+        height: 200px;
+    }
+    .showContent .alldet .card{
+        width: 150px;
+        border: none !important;
+    }
+    .sliding .alldet .titled .imgtitle{
+        font-size: 16px;
+    }
+    .showContent .sliding::-webkit-scrollbar{
+        display: none;
+    }
+    /* See More */
+    .allContent .allShow{
+        margin: 5px 0px;
+        padding: 0px;
+    }
+    .allShow .fullScroll{
+        display: grid;
+        grid-template-columns: repeat(5, 18%);
+        grid-gap: 18px;
+    }
+    /* End See more */
+}
+
+@media screen and (max-width:540px) {
+    .sliding .alldet{
+        margin: 0px 5px;
+        width: 100px;
+    }
+    .showContent .alldet .card{
+        width: 100px;
+        border: none !important;
+    }
+    /* See More */
+    .showContent .alldet .card img,
+    .fullScroll .allCont .card,
+    .fullScroll .allCont .card img{
+        height: 150px;
+    }
+    .allShow .fullScroll{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+        grid-gap: 18px;
+    }
+    /* End See more */
+}

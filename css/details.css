@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: whitesmoke;
+}
+
+.mainclass .posterImgBack{
+    width: 100%;
+    height: 100%;
+    /* height: 92.5vh; */
+}
+.mainclass .posterImgBack img{
+    width: 99%;
+    height: 90%;
+    filter: blur(6px);
+    opacity: 0.6;
+    position: absolute;
+}
+.mainclass .alldetailSec{
+    width: 100vw;
+    box-sizing: border-box;
+    /* position: absolute; */
+    position: relative;
+    background: linear-gradient(to right, rgba(28, 41, 57, 0.856) 20%, transparent);
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.753) 25%, transparent); */
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.alldetailSec .infoSec{
+    width: 60%;
+    padding: 15px;
+}
+.alldetailSec .infoSec h1{
+    font-family:'Roboto', sans-serif;
+    /* font-family:'Bebas Neue', cursive; */
+    font-size: 50px;
+    font-weight: 500;
+}
+.alldetailSec .posterSec{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding:5px 25px; */
+}
+.alldetailSec .posterSec img{
+    width: 100%;
+    /* width: auto; */
+    height: 80vh;
+    /* max-width: 500px; */
+    /* height: auto; */
+    /* max-height: 80%; */
+}
+
+.alldetailSec .contentSmall{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.alldetailSec .contentSmall p{
+    color: lightgray;
+    margin-bottom: 0;
+}
+.alldetailSec .contentSmall .contentImdb p span{
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgb(212,159,35);
+    color: black;
+    padding:1px 3px;
+    text-align: center;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+.alldetailSec .contentSmall .contentRate p span{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 5px;
+    color: lightgray;
+    border: 1px solid lightgray;
+    /* box-sizing: border-box; */
+}
+.contentSame{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: justify;
+    /* width: 95%; */
+    display: flex;
+    /* justify-content:space-between ; */
+    /* align-items: center; */
+}
+
+.contentSame .contTit{
+    width: 15%;
+}
+.contentSame .contDa{
+    width: 85%;
+    text-align: left;
+}
+.contentSame .contDa p{
+    color: rgba(69, 203, 248, 0.63);
+}
+
+/* Trailer Part */
+
+.contentTrailer{
+    margin: 10px auto;
+}
+.trailer button{
+    background-color: rgba(28, 41, 57, 0.932);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 10px 10px 30px rgba(54, 78, 107, 0.897),
+                      3px 3px 10px rgba(0, 0, 0, 0.753),
+                      -3px -3px 10px rgba(0, 0, 0, 0.753);
+}
+.trailer button i{
+    font-size: 30px;
+}
+.trailer button span{
+    font-size: 20px;
+    margin-left: 10px;
+    display: none;
+}
+.trailer button:hover{
+    transition: ease-in 700ms;
+    background-color: whitesmoke;
+    box-shadow: none;
+}
+.trailer button:hover i,
+.trailer button:hover span{
+    color:rgba(28, 41, 57, 0.932);
+    display: block;
+    font-weight: 600;
+}
+.contentTrailer .trailerBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(94, 92, 92, 0.76);
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+.trailerBox .trailerFrame #trailer{
+    width: 75vw;
+    height: 75vh;
+}
+.trailerBox .trailerFrame i{
+    position: absolute;
+    bottom: 5vh;
+    left: 50vw;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.trailerBox .trailerFrame i:hover{
+    background-color: grey;
+    border-radius: 50%;
+    color: lightgray;
+}
+
+/* cast */
+.peopleArea{
+    margin: 30px auto 15px;
+}
+.movieCast, .similarMovies{
+    margin: 5px auto;
+}
+.peopleArea .actorShow{
+    width: 100%;
+    margin: 10px auto;
+}
+.actorShow .actorList{
+    display: grid;
+    grid-template-columns: repeat(9, 10%);
+    grid-gap: 16px;
+    justify-content: space-evenly;
+}
+.actorData{
+    overflow: hidden;
+    width: 100%;
+}
+.actorData .card,.actorData .card img{
+    border: none !important;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    cursor: pointer;
+}
+.card .actorTitle{
+    position: absolute;
+    width: inherit;
+    text-align: center;
+    height: inherit;
+    display: flex;
+    top: -100%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.76);
+    transition: all 0.5s;
+}
+.card .actorTitle h5{
+    color: rgb(28, 41, 57);
+    font-weight: 600;
+}
+.actorData .card:hover .actorTitle{
+    top: 0;
+}
+
+/* similars */
+.showContent{
+    margin: 10px 0px;
+}
+.sliding .alldet{
+    margin: 0px 5px;
+    width: 190px;
+}
+.sliding .alldet .card{
+    width: 190px;
+}
+.showContent .alldet .card img{
+    height: 250px;
+}
+
+@media screen and (max-width:1030px) {
+    .mainclass .alldetailSec{
+        padding: 25px;
+    }
+    .alldetailSec .posterSec{
+        padding: 15px;
+    }
+    .contentSame .contTit{
+        width: 20%;
+    }
+    .contentSame .contDa{
+        width: 80%;
+        text-align: left;
+    }
+    /* actorList */
+    .actorShow .actorList{
+    grid-template-columns: repeat(7, 13%);
+    }
+}
+@media screen and (max-width:770px){
+    .mainclass .alldetailSec{
+        padding: 10px;
+        width: 100%;
+    }
+    .alldetailSec .infoSec,.alldetailSec .posterSec{
+        padding: 0px 5px;
+    }
+    .alldetailSec .infoSec h1{
+        font-size: 30px;
+    }
+    .alldetailSec .contentSmall{
+        margin: 5px auto;
+    }
+    .trailer button{
+        padding: 8px;
+        font-size: 20px;
+    }
+    .trailer button i{
+        font-size: 20px;
+    }
+    .contentSame{
+        font-size: 16px;
+        /* font-weight: 500; */
+        line-height: 1.25rem;
+    }
+    /* actorList */
+    .peopleArea{
+        margin: 10px auto 5px;
+    }
+    .peopleArea .px-3{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .actorShow .actorList{
+        grid-template-columns: repeat(6, 15%);
+    }
+    .actorData .card,.actorData .card img{
+        height: 180px;
+    }
+    /* similar movie */
+    .sliding .alldet{
+        width: 140px;
+    }
+    .sliding .alldet .card{
+        width: 140px;
+    }
+    .showContent .alldet .card img{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .mainclass{
+        padding: 0px !important;
+    }
+    .mainclass .posterImgBack{
+        display: none;
+    }
+    .mainclass .alldetailSec{
+        /* width: 100%; */
+        padding: 10px;
+        margin: 0 !important;
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+    }
+    .alldetailSec .infoSec{
+        width: 100vw;
+        padding:0px 10px;
+        margin: 0 !important;
+    }
+    .alldetailSec .posterSec{
+        width: 100%;
+        display: flex;
+        padding: 0 !important;
+        margin: 0 !important;
+        justify-content: center;
+        /* margin: auto; */
+        align-items: center;
+    }
+    /* .alldetailSec */
+    .posterSec .posterImg{
+        width: 100%;
+        height: 250px;
+    }
+    .alldetailSec .posterSec .posterImg img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .trailer button span{
+        display: block;
+    }
+    .trailerBox .trailerFrame #trailer{
+        width: 100vw;
+        height: 50vh;
+        /* padding: 0px; */
+    }
+    /* actorList */
+    .actorShow .actorList{
+        grid-template-columns: repeat(4, 22%);
+        grid-gap: 10px;
+    }
+    .actorData .card,.actorData .card img{
+        height: 125px;
+    }
+    /* similar Movie */
+    .sliding .alldet{
+        width: 100px;
+    }
+    .sliding .alldet .card{
+        width: 100px;
+    }
+    .showContent .alldet .card img{
+        height: 150px;
+    }
+}
